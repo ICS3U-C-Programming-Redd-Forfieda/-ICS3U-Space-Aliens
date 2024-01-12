@@ -23,10 +23,10 @@ def menu_scene():
     text1.text("MT Game Studio")
     text.append(text1)
 
-    text2 = stage.Text(width=29, height=12, font=None, pallete=constants.RED_PALETTE, buffer=None)
+    text2 = stage.Text(width=29, height=12, font=None, palette=constants.RED_PALETTE, buffer=None)
     text2.move(40, 110)
     text2.text("PRESS START")
-    text2.append(text2)
+    text.append(text2)
     
     # sets the background to image 0 in the image Bank
     #   and the sie (10x8 tiles of size 16x16)
@@ -48,13 +48,13 @@ def menu_scene():
         # get user input
         keys = ugame.buttons.get_pressed()
 
-       
-    if keys & ugame.K_START != 0:
-        game_scene  
-    
-       
-        #redraw Sprites
-        game.tick()
+        
+        if keys & ugame.K_START != 0:
+            game_scene()  
+        
+        
+            #redraw Sprites
+            game.tick()
 
 def game_scene():
     # this function is the main game scene
